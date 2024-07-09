@@ -6,32 +6,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-color: #151515;">
-    <div class="modal" id="balanceModal">
+    <div class="modal" id="balanceModal" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Баланс</h2>
-            <p>Баланс: <span id="balance">0</span></p>
+            <span class="close" aria-label="Close dialog">&times;</span>
+            <h2 id="balanceModalLabel">Баланс</h2>
+            <p id="balanceModalDesc">Баланс: <span id="balance">0</span></p>
             <p>Добыча в минуту: <span id="dobyta">0</span></p>
         </div>
     </div>
-    <div class="modal" id="friendModal">
+    <div class="modal" id="friendModal" role="dialog" aria-labelledby="friendModalLabel" aria-describedby="friendModalDesc">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Друзья</h2>
+            <span class="close" aria-label="Close dialog">&times;</span>
+            <h2 id="friendModalLabel">Друзья</h2>
             <!-- Содержимое модального окна -->
         </div>
     </div>
-    <div class="modal" id="miningModal">
+    <div class="modal" id="miningModal" role="dialog" aria-labelledby="miningModalLabel" aria-describedby="miningModalDesc">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Майнинг</h2>
+            <span class="close" aria-label="Close dialog">&times;</span>
+            <h2 id="miningModalLabel">Майнинг</h2>
             <!-- Содержимое модального окна -->
         </div>
     </div>
-    <div class="modal" id="taskModal">
+    <div class="modal" id="taskModal" role="dialog" aria-labelledby="taskModalLabel" aria-describedby="taskModalDesc">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Задачи</h2>
+            <span class="close" aria-label="Close dialog">&times;</span>
+            <h2 id="taskModalLabel">Задачи</h2>
             <!-- Содержимое модального окна -->
         </div>
     </div>
