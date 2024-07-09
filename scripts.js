@@ -45,7 +45,8 @@ window.onload = function() {
     window.addEventListener("click", function(event) {
         var clickedElement = event.target;
         modals.forEach(function(modal) {
-            if (modal.style.display === "block" && !modal.contains(clickedElement) && !clickedElement.classList.contains('nav-button-friends') && !clickedElement.classList.contains('nav-button-mining') && !clickedElement.classList.contains('nav-button-tasks')) {
+            var modalContent = modal.querySelector('.modal-content');
+            if (modal.style.display === "block" && !modalContent.contains(clickedElement) && !clickedElement.classList.contains('nav-button-friends') && !clickedElement.classList.contains('nav-button-mining') && !clickedElement.classList.contains('nav-button-tasks')) {
                 closeModal(modal.id);
             }
         });
