@@ -88,3 +88,16 @@ nav ul li button:hover {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%; /* Ширину увеличиваем для меньших экранов */
+        margin: 10% auto; /* Отступы уменьшаем для лучшего размещения на мобильных устройствах */
+    }
+
+    nav ul {
+        flex-direction: column; /* Переводим кнопки в столбец для мобильных устройств */
+        align-items: center; /* Выравниваем кнопки по центру */
+    }
+}
