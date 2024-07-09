@@ -2,23 +2,29 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>CashИзРозетки</title>
+    <title>CashFromSocket</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>CashИзРозетки</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Ваша статистика</h2>
-            <p>Ваш баланс: <span id="balance">0</span></p>
-            <button id="mineButton">Начать майнинг</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 CashИзРозетки</p>
-    </footer>
+<body style="background-color: #151515;">
+    <div class="modal" id="balanceModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Баланс: <span id="balance">0</span></p>
+            <p>Добыча в минуту: <span id="dobyta">0</span></p>
+        </div>
+    </div>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="friends.html">Друзья</a></li>
+                <li><a href="mining.html">Майнинг</a></li>
+                <li><a href="tasks.html">Задачи</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Содержимое главного окна -->
+        </main>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
