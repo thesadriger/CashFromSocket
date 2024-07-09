@@ -49,6 +49,10 @@ body {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex; /* Используйте Flexbox для выравнивания кнопок */
+    justify-content: center; /* Центрирование кнопок по горизонтали */
+    align-items: center; /* Центрирование кнопок по вертикали */
+    width: 100%; /* Устанавливает ширину списка кнопок */
 }
 
 nav ul li button {
