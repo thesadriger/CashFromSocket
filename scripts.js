@@ -1,38 +1,44 @@
 window.onload = function() {
-    var modal = document.getElementById("balanceModal");
-    var span = document.getElementsByClassName("close")[0];
+    // Получаем модальное окно баланса и кнопку закрытия
+    var balanceModal = document.getElementById("balanceModal");
+    var closeButtons = document.querySelectorAll(".close");
 
-    // Показываем модальное окно при загрузке страницы
-    modal.style.display = "block";
+    // Показываем модальное окно баланса при загрузке страницы
+    balanceModal.style.display = "block";
 
-    // Закрываем модальное окно при закрытии
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+    // Закрываем модальное окно при клике на кнопку закрытия
+    closeButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            balanceModal.style.display = "none";
+        });
+    });
 
-    // Функция для открытия модального окна
+    // Функции для открытия и закрытия модальных окон
     function openModal(modalId) {
         document.getElementById(modalId).style.display = "block";
     }
 
-    // Функция для закрытия модального окна
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = "none";
     }
 
-    // Пример использования функций для кнопок
-    document.querySelector('.nav-button-friends').onclick = function() { openModal('friendModal'); };
-    document.querySelector('.nav-button-mining').onclick = function() { openModal('miningModal'); };
-    document.querySelector('.nav-button-tasks').onclick = function() { openModal('taskModal'); };
+    // Добавляем обработчики событий для кнопок
+    document.querySelector('.nav-button-friends').addEventListener("click", function() { openModal('friendModal'); });
+    document.querySelector('.nav-button-mining').addEventListener("click", function() { openModal('miningModal'); });
+    document.querySelector('.nav-button-tasks').addEventListener("click", function() { openModal('taskModal'); });
 
     // Закрытие модального окна при клике вне его области
-    window.onclick = function(event) {
+    window.addEventListener("click", function(event) {
         var modals = ['balanceModal', 'friendModal', 'miningModal', 'taskModal'];
+        var clickedElement = event.target;
+
+        // Проверяем, был ли клик внутри одного из модальных окон
         for (var i = 0; i < modals.length; i++) {
             var modal = document.getElementById(modals[i]);
-            if (event.target == modal) {
-                closeModal(modals[i]);
+            if (clickedElement === modal || clickedElement.closest(modal)) {
+                closeModal(modals[i]); // Если да, закрываем модальное окно
+                break; // Выходим из цикла
             }
         }
-    };
+    });
 };
