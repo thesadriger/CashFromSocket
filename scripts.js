@@ -29,16 +29,20 @@ window.onload = function() {
         var modal = document.getElementById(modalId);
         if (modal) {
             modal.style.display = "none"; // Close the modal window
-            // It's better not to remove event listeners within close function to avoid potential bugs
         }
     }
 
     // Add event handlers for navigation buttons
     document.querySelectorAll('.nav-button-friends, .nav-button-mining, .nav-button-tasks').forEach(function(button) {
         button.addEventListener("click", function() {
-            var modalId = this.classList.contains('nav-button-friends') ? 'friendModal' : 
-                          this.classList.contains('nav-button-mining') ? 'miningModal' :
-                          'taskModal';
+            var modalId;
+            if (this.classList.contains('nav-button-friends')) {
+                modalId = 'friendModal';
+            } else if (this.classList.contains('nav-button-mining')) {
+                modalId = 'miningModal';
+            } else if (this.classList.contains('nav-button-tasks')) {
+                modalId = 'taskModal';
+            }
             openModal(modalId);
         });
     });
@@ -46,10 +50,8 @@ window.onload = function() {
     // Close the modal window when clicking outside its area
     window.addEventListener("click", function(event) {
         var clickedElement = event.target;
-        var modalsArray = Array.from(modals);
-        
-        modalsArray.forEach(function(modal) {
-            if (modal.style.display === "block" && !modal.contains(clickedElement)) {
+        modals.forEach(function(modal) {
+            if (modal.style.display === "block" && !modal.contains(clickedElement) && !clickedElement.classList.contains('nav-button-friends') && !clickedElement.classList.contains('nav-button-mining') && !clickedElement.classList.contains('nav-button-tasks')) {
                 closeModal(modal.id); // If click outside the modal window, close it
             }
         });
