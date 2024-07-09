@@ -55,7 +55,10 @@ window.onload = function() {
         modals.forEach(function(modal) {
             var modalContent = modal.querySelector('.modal-content'); // Содержимое модального окна
             // Проверяем, открыт ли модальное окно, и был ли клик вне области его содержимого
-            if (modal.style.display === "block" && !modalContent.contains(clickedElement) && !clickedElement.classList.contains('nav-button-friends') && !clickedElement.classList.contains('nav-button-mining') && !clickedElement.classList.contains('nav-button-tasks')) {
+            if (modal.style.display === "block" && !modalContent.contains(clickedElement) 
+                                                && !clickedElement.classList.contains('nav-button-friends') 
+                                                && !clickedElement.classList.contains('nav-button-mining') 
+                                                && !clickedElement.classList.contains('nav-button-tasks')) {
                 closeModal(modal.id); // Закрываем модальное окно
             }
         });
