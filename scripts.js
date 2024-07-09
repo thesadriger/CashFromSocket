@@ -1,15 +1,17 @@
 window.onload = function() {
-    // Получаем модальное окно баланса и кнопку закрытия
-    var balanceModal = document.getElementById("balanceModal");
+    // Получаем модальные окна и кнопки закрытия
+    var modals = document.querySelectorAll(".modal");
     var closeButtons = document.querySelectorAll(".close");
 
-    // Показываем модальное окно баланса при загрузке страницы
-    balanceModal.style.display = "block";
+    // Показываем первое модальное окно при загрузке страницы
+    modals[0].style.display = "block";
 
     // Закрываем модальное окно при клике на кнопку закрытия
     closeButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            balanceModal.style.display = "none";
+        button.addEventListener("click", function(e) {
+            e.stopPropagation(); // Предотвращаем закрытие при клике на кнопку
+            var currentModal = this.closest(".modal"); // Находим ближайшее модальное окно
+            closeModal(currentModal.id);
         });
     });
 
@@ -19,26 +21,30 @@ window.onload = function() {
     }
 
     function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none"; // Закрываем модальное окно
+        modal.removeEventListener('click', closeModal); // Удаляем обработчик события закрытия
     }
 
     // Добавляем обработчики событий для кнопок
-    document.querySelector('.nav-button-friends').addEventListener("click", function() { openModal('friendModal'); });
-    document.querySelector('.nav-button-mining').addEventListener("click", function() { openModal('miningModal'); });
-    document.querySelector('.nav-button-tasks').addEventListener("click", function() { openModal('taskModal'); });
+    document.querySelectorAll('.nav-button-friends, .nav-button-mining, .nav-button-tasks').forEach(function(button) {
+        button.addEventListener("click", function() {
+            var modalId = this.classList.contains('nav-button-friends') ? 'friendModal' : 
+                           this.classList.contains('nav-button-mining') ? 'miningModal' :
+                           'taskModal';
+            openModal(modalId);
+        });
+    });
 
     // Закрытие модального окна при клике вне его области
     window.addEventListener("click", function(event) {
-        var modals = ['balanceModal', 'friendModal', 'miningModal', 'taskModal'];
         var clickedElement = event.target;
-
-        // Проверяем, был ли клик внутри одного из модальных окон
-        for (var i = 0; i < modals.length; i++) {
-            var modal = document.getElementById(modals[i]);
-            if (clickedElement === modal || clickedElement.closest(modal)) {
-                closeModal(modals[i]); // Если да, закрываем модальное окно
-                break; // Выходим из цикла
+        var modals = Array.from(document.querySelectorAll('.modal'));
+        
+        modals.forEach(function(modal) {
+            if (!modal.contains(clickedElement)) {
+                closeModal(modal.id); // Если клик вне модального окна, закрываем его
             }
-        }
+        });
     });
 };
