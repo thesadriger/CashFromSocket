@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="modal" id="balanceModal" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
+    <div class="modal fixed-top" id="balanceModal" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
         <div class="modal-content">
             <span class="close" aria-label="Close dialog">&times;</span>
             <h2 id="balanceModalLabel">Баланс</h2>
@@ -36,16 +36,16 @@
         </div>
     </div>
     <div class="container">
-        <nav>
+        <main>
+            <!-- Содержимое главного окна -->
+        </main>
+        <nav class="fixed-bottom">
             <ul class="nav-buttons">
                 <li><button class="nav-button-friends">Друзья</button></li>
                 <li><button class="nav-button-mining">Майнинг</button></li>
                 <li><button class="nav-button-tasks">Задачи</button></li>
             </ul>
         </nav>
-        <main>
-            <!-- Содержимое главного окна -->
-        </main>
     </div>
     <script src="scripts.js"></script>
 </body>
