@@ -3,8 +3,6 @@ window.onload = function() {
     var modals = document.querySelectorAll(".modal");
     var closeButtons = document.querySelectorAll(".close");
 
-    
-
     // Добавляем обработчики событий для кнопок закрытия
     closeButtons.forEach(function(button) {
         button.addEventListener("click", function(e) {
