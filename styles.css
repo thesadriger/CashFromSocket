@@ -16,9 +16,28 @@ body {
     left: 0;
     width: 100%; /* Ширина модального окна */
     overflow: auto; /* Включаем прокрутку, если содержимое не помещается */
-    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный фон */
     user-select: none; /* Запрещаем выделение текста и объектов на странице */
 }
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .fixed-top {
     top: 0; /* Закрепляем сверху */
@@ -36,6 +55,7 @@ body {
 .modal-content {
     background-color: rgb(249, 249, 249); /* Фон содержимого модального окна (светло-серый) */
     margin: 15% auto; /* Отступ сверху и авто-центрирование по горизонтали */
+    border: 1px solid rgb(135, 135, 135); /* Светлая граница */
     padding: 20px; /* Внутренние отступы */
     width: 80%; /* Ширина содержимого модального окна */
     border-radius: 15px; /* Скругляем углы */
