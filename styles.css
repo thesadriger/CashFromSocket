@@ -47,9 +47,8 @@ body {
 
 .fixed-bottom {
     position: fixed; /* Закрепляем снизу */
-    bottom: 0; /* Прикрепляем к нижней части экрана */
+    top: 15%; /* Прикрепляем к нижней части экрана */
     width: 100%; /* Полная ширина */
-    background-color: rgb(21, 21, 21); /* Фон навигации */
 }
 
 /* Стили для содержимого модального окна */
@@ -64,13 +63,14 @@ body {
     border-radius: 15px; /* Скругляем углы */
 }
 .modal-content-task {
-    background: linear-gradient(-45deg, #23a6d5, #23abd5);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    margin: 50% auto; /* Отступ сверху и авто-центрирование по горизонтали */
+    animation: gradient 15s ease infinite;
+    /*margin: 5% auto;  Отступ сверху и авто-центрирование по горизонтали */
     border: 1px solid rgb(135, 135, 135); /* Светлая граница */
-    padding: 20%; /* Внутренние отступы */
-    width: 40%; /* Ширина содержимого модального окна */
-    border-radius: 2%; /* Скругляем углы */
+    /*padding: 5px;  Внутренние отступы */
+    width: 80%; /* Ширина содержимого модального окна */
+    border-radius: 15px; /* Скругляем углы */
 }
 
 .modal-content-minig {
