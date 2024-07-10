@@ -80,7 +80,7 @@ body {
     padding: 2%;
 }
 .modal-content-task {
-    background: linear-gradient(-45deg,#23a6d5, #23d5ab);
+    background: linear-gradient(-45deg,#23a6d5, #23a6d5);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     margin: 1% auto; /* Отступ сверху и авто-центрирование по горизонтали */
@@ -91,7 +91,7 @@ body {
 }
 
 .modal-content-minig {
-    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #23a6d5, #23a6d5);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     margin: 1% auto; /* Отступ сверху и авто-центрирование по горизонтали */
@@ -101,7 +101,7 @@ body {
 }
 
 .modal-content-friend {
-    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #23a6d5, #23a6d5);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     margin: 1% auto; /* Отступ сверху и авто-центрирование по горизонтали */
