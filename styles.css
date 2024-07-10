@@ -19,25 +19,17 @@ body {
     user-select: none; /* Запрещаем выделение текста и объектов на странице */
 }
 
-body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-
 
 .fixed-top {
     top: 0; /* Закрепляем сверху */
@@ -117,6 +109,14 @@ nav ul li button {
 /* Стили для кнопок при наведении */
 nav ul li button:hover {
     background-color: rgb(52, 52, 52); /* Фон кнопок при наведении (темно-серый) */
+}
+
+/* Стили для градиентной кнопки "Баланс" */
+body-balance {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
 }
 
 /* Медиа-запрос для адаптивности на мобильных устройствах */
