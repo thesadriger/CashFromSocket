@@ -8,9 +8,11 @@
 <body>
     <div class="fixed-top" id="balanceModal" class="body-balance" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
         <div class="modal-content">
-            <h2 id="balanceModalLabel">Баланс</h2>
-            <p id="balanceModalDesc">Баланс: <span id="balance">0</span></p>
-            <p>Добыча в минуту: <span id="dobyta">0</span></p>
+            <div class="text-balance">
+                <h2 id="balanceModalLabel">Баланс</h2>
+                <p id="balanceModalDesc">Хэшрейт: <span id="balance">0 TH</span></p>
+                <p>Доход за день: <span id="dobyta">0  BTC</span></p>
+            </div>
         </div>
     </div>
 
@@ -30,28 +32,32 @@
         <div id="friendModal" class="modal" role="dialog" aria-labelledby="friendModalLabel" aria-describedby="friendModalDesc">
             <div class="modal-content">
                 <span class="close" aria-label="Close dialog">&times;</span>
-                <h2 id="friendModalLabel">Друзья</h2>
-                <!-- Содержимое модального окна -->
+                <div class="name-modal">
+                    <h2 id="friendModalLabel">Друзья</h2>
+                </div>
             </div>
         </div>
         <div id="miningModal" class="modal" role="dialog" aria-labelledby="miningModalLabel" aria-describedby="miningModalDesc">
             <div class="modal-content">
                 <span class="close" aria-label="Close dialog">&times;</span>
-                <h2 id="miningModalLabel">Майнинг</h2>
-                <!-- Содержимое модального окна -->
+                <div class="name-modal"> 
+                    <h2 id="miningModalLabel">Майнинг</h2>
+                </div>
+                
             </div>
         </div>
         <div id="taskModal" class="modal" role="dialog" aria-labelledby="taskModalLabel" aria-describedby="taskModalDesc">
             <div class="modal-content">
                 <span class="close" aria-label="Close dialog">&times;</span>
-                <h2 id="taskModalLabel">Задачи</h2>
-                <!-- Содержимое модального окна -->
-                <div class="rounded-container">
-                    <div class="rounded-corner"></div>
-                    <div class="rounded-corner"></div>
-                    <div class="rounded-corner"></div>
-                    <div class="rounded-corner"></div>
-                    <div class="rounded-corner"></div>
+                <div class="name-modal">
+                    <h2 id="taskModalLabel">Задачи</h2>
+                    <div class="rounded-container">
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                    </div>
                 </div>
             </div>
         </div>

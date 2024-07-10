@@ -61,6 +61,10 @@ body {
     width: 80%; /* Ширина содержимого модального окна */
     border-radius: 15px; /* Скругляем углы */
 }
+/* Отступы внутри бокса*/
+.text-balance{
+    padding: 2%;
+}
 .modal-content-task {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -90,6 +94,11 @@ body {
     float: right; /* Выравниваем кнопку справа */
     font-size: 28px; /* Размер шрифта */
     font-weight: bold; /* Жирное начертание */
+    padding: 1%;
+}
+
+.name-modal{
+    padding: 5%; /* Внутренние отступы  вкладок*/
 }
 
 /* Стили для кнопки закрытия при наведении и фокусе */
