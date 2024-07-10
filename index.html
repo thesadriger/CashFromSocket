@@ -4,49 +4,61 @@
     <meta charset="UTF-8">
     <title>CashFromSocket</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключаем jQuery -->
 </head>
 <body>
-    <div class="modal fixed-top" id="balanceModal" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
-        <div class="modal-content" class="body-balance">
-            <span class="close" aria-label="Close dialog">&times;</span>
-            <h2 id="balanceModalLabel" >Баланс</h2>
+    <div class="modal fixed-top" id="balanceModal" class="body-balance" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
+        <div class="modal-content">
+            <h2 id="balanceModalLabel">Баланс</h2>
             <p id="balanceModalDesc">Баланс: <span id="balance">0</span></p>
             <p>Добыча в минуту: <span id="dobyta">0</span></p>
         </div>
     </div>
-    <div class="modal" id="friendModal" role="dialog" aria-labelledby="friendModalLabel" aria-describedby="friendModalDesc">
-        <div class="modal-content">
-            <span class="close" aria-label="Close dialog">&times;</span>
-            <h2 id="friendModalLabel">Друзья</h2>
-            <!-- Содержимое модального окна -->
+
+    <div>
+        <div id="friendModal" class="modal" role="dialog" aria-labelledby="friendModalLabel" aria-describedby="friendModalDesc">
+            <div class="modal-content">
+                <span class="close" aria-label="Close dialog">&times;</span>
+                <h2 id="friendModalLabel">Друзья</h2>
+                <!-- Содержимое модального окна -->
+            </div>
+        </div>
+        <div id="miningModal" class="modal" role="dialog" aria-labelledby="miningModalLabel" aria-describedby="miningModalDesc">
+            <div class="modal-content">
+                <span class="close" aria-label="Close dialog">&times;</span>
+                <h2 id="miningModalLabel">Майнинг</h2>
+                <!-- Содержимое модального окна -->
+            </div>
+        </div>
+        <div id="taskModal" class="modal" role="dialog" aria-labelledby="taskModalLabel" aria-describedby="taskModalDesc">
+            <div class="modal-content-task">
+                <span class="close" aria-label="Close dialog">&times;</span>
+                <h2 id="taskModalLabel">Задачи</h2>
+                <!-- Содержимое модального окна -->
+                <div class="rounded-container">
+                    <div class="rounded-corner"></div>
+                    <div class="rounded-corner"></div>
+                    <div class="rounded-corner"></div>
+                    <div class="rounded-corner"></div>
+                    <div class="rounded-corner"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="modal" id="miningModal" role="dialog" aria-labelledby="miningModalLabel" aria-describedby="miningModalDesc">
-        <div class="modal-content">
-            <span class="close" aria-label="Close dialog">&times;</span>
-            <h2 id="miningModalLabel">Майнинг</h2>
-            <!-- Содержимое модального окна -->
-        </div>
-    </div>
-    <div class="modal" id="taskModal" role="dialog" aria-labelledby="taskModalLabel" aria-describedby="taskModalDesc">
-        <div class="modal-content">
-            <span class="close" aria-label="Close dialog">&times;</span>
-            <h2 id="taskModalLabel">Задачи</h2>
-            <!-- Содержимое модального окна -->
-        </div>
-    </div>
+
     <div class="container">
         <main>
             <!-- Содержимое главного окна -->
         </main>
         <nav class="fixed-bottom">
             <ul class="nav-buttons">
-                <li><button class="nav-button-friends">Друзья</button></li>
-                <li><button class="nav-button-mining">Майнинг</button></li>
-                <li><button class="nav-button-tasks">Задачи</button></li>
+                <li><button id="button-friends" class="nav-button-friends button">Друзья</button></li>
+                <li><button id="button-mining" class="nav-button-mining button">Майнинг</button></li>
+                <li><button id="button-tasks" class="nav-button-tasks button">Задачи</button></li>
             </ul>
         </nav>
     </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
