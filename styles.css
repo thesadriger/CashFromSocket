@@ -65,7 +65,7 @@ body {
 }
 .modal-content-task {
     background: linear-gradient(-45deg, #23a6d5, #23abd5);
-    background-size: 20% 20%;
+    background-size: 400% 400%;
     margin: 50% auto; /* Отступ сверху и авто-центрирование по горизонтали */
     border: 1px solid rgb(135, 135, 135); /* Светлая граница */
     padding: 20%; /* Внутренние отступы */
