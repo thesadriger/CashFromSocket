@@ -6,12 +6,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="modal fixed-top" id="balanceModal" class="body-balance" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
+    <div class="fixed-top" id="balanceModal" class="body-balance" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
         <div class="modal-content">
             <h2 id="balanceModalLabel">Баланс</h2>
             <p id="balanceModalDesc">Баланс: <span id="balance">0</span></p>
             <p>Добыча в минуту: <span id="dobyta">0</span></p>
         </div>
+    </div>
+
+    <div class="container">
+        <main>
+            <nav class="fixed-bottom">
+                <ul class="nav-buttons">
+                    <li><button id="button-friends" class="nav-button-friends button">Друзья</button></li>
+                    <li><button id="button-mining" class="nav-button-mining button">Майнинг</button></li>
+                    <li><button id="button-tasks" class="nav-button-tasks button">Задачи</button></li>
+                </ul>
+            </nav>
+        </main>
     </div>
 
     <div>
@@ -43,19 +55,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        <main>
-            <!-- Содержимое главного окна -->
-        </main>
-        <nav class="fixed-bottom">
-            <ul class="nav-buttons">
-                <li><button id="button-friends" class="nav-button-friends button">Друзья</button></li>
-                <li><button id="button-mining" class="nav-button-mining button">Майнинг</button></li>
-                <li><button id="button-tasks" class="nav-button-tasks button">Задачи</button></li>
-            </ul>
-        </nav>
     </div>
 
     <script src="scripts.js"></script>
