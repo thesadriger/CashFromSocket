@@ -3,10 +3,7 @@ window.onload = function() {
     var modals = document.querySelectorAll(".modal");
     var closeButtons = document.querySelectorAll(".close");
 
-    // Показываем первое модальное окно при загрузке страницы, если есть хотя бы одно модальное окно
-    if (modals.length > 0) {
-        modals[0].style.display = "block";
-    }
+    
 
     // Добавляем обработчики событий для кнопок закрытия
     closeButtons.forEach(function(button) {
