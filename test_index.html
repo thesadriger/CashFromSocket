@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CashFromSocket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="fixed-top" id="balanceModal" class="body-balance" role="dialog" aria-labelledby="balanceModalLabel" aria-describedby="balanceModalDesc">
+        <div class="modal-content">
+            <div class="text-balance">
+                <h2 id="balanceModalLabel">Майнинг</h2>
+                <p id="balanceModalDesc">Хэшрейт: <span id="balance">0 TH/s</span></p>
+                <p>Доход за день: <span id="dobyta">0  BTC</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+            <nav class="fixed-bottom">
+                <ul class="nav-buttons">
+                    <li><button id="button-friends" class="nav-button-friends button">Друзья</button></li>
+                    <li><button id="button-mining" class="nav-button-mining button">Майнинг</button></li>
+                    <li><button id="button-tasks" class="nav-button-tasks button">Задачи</button></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <div>
+        <div id="friendModal" class="modal" role="dialog" aria-labelledby="friendModalLabel" aria-describedby="friendModalDesc">
+            <div class="modal-content">
+                <span class="close" aria-label="Close dialog">&times;</span>
+                <div class="name-modal">
+                    <h2 id="friendModalLabel">Друзья</h2>
+                </div>
+            </div>
+        </div>
+        <div id="miningModal" class="modal" role="dialog" aria-labelledby="miningModalLabel" aria-describedby="miningModalDesc">
+            <div class="modal-content">
+                <span class="close" aria-label="Close dialog">&times;</span>
+                <div class="name-modal"> 
+                    <h2 id="miningModalLabel">Майнинг</h2>
+                </div>
+                
+            </div>
+        </div>
+        <div id="taskModal" class="modal" role="dialog" aria-labelledby="taskModalLabel" aria-describedby="taskModalDesc">
+            <div class="modal-content">
+                <span class="close" aria-label="Close dialog">&times;</span>
+                <div class="name-modal">
+                    <h2 id="taskModalLabel">Задачи</h2>
+                    <div class="rounded-container">
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                        <div class="rounded-corner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
